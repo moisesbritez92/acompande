@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructivo de Ayuda Escolar - ANDE</title>
+    <style>
+
+        h2 {
+            color: black;
+        }
+        h3 {
+            color: black;
+        }
+        p {
+            margin: 3px 0;
+        }
+    </style>
+</head>
+<div class="content" style='flex-wrap: nowrap;'>
+    <h2>Subsidio de Ayuda Escolar</h2>
+    <p>Aplica únicamente a los funcionarios permanentes o que hayan alcanzado esta condición hasta diciembre del año anterior al pago.</p>
+
+    <h3>Condiciones</h3>
+    <p>La ayuda equivale al 40% de 1,5 del Salario Mínimo Mensual de ANDE (SMMA) por cada hijo estudiante, desde el jardin (4 años cumplidos o por cumplir hasta el 31 de marzo del año lectivo) hasta el tercero de la media.</p>
+    <p>Para hijos con discapacidad, el subsidio es del 50% de 1,5 del SMMA, sin límite de edad.</p>
+    <p>Los documentos necesarios incluyen matrícula escolar o certificación de inscripción según el nivel educativo del hijo.</p>
+    <p>La ayuda solo se concede a uno de los cónyuges si ambos son funcionarios.</p>
+    <p>La ayuda se ajusta con cada reajuste del SMMA y no se incluye en el cálculo del aguinaldo ni en las imposiciones por seguridad social.</p>
+
+    <h3>Responsabilidades</h3>
+    <p>Las Unidades Administrativas deben remitir en tiempo y forma los documentos necesarios al Departamento de Acompañamiento del Personal (DRH/DAP).</p>
+    <p>La Jefatura de cada unidad es responsable de administrar los recursos asignados y asegurar la correcta aplicación del instructivo.</p>
+    <p>El DRH/DAP verifica la documentación y registra la información en el sistema.</p>
+    <p>El DRH/DGP realiza la liquidación del subsidio.</p>
+
+    <h3>6. Descripción del Procedimiento</h3>
+    <p>El funcionario prepara y presenta la Solicitud de Subsidio (SS) con la documentación requerida.</p>
+    <p>La Unidad Administrativa revisa y remite los documentos al DRH/DAP.</p>
+    <p>El DRH/DAP verifica y registra la solicitud en el sistema.</p>
+    <p>Si los documentos cumplen con los requisitos, se procede con la liquidación para el pago.</p>
+    <p></p>
+    <a href="{% static 'Solicitud_de_subsidio.pdf' %}" class='btn primary' style='width:240px; color: white; text-decoration: none; display: inline-block;'>
+        Formulario de subsidio
+</a>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="content">
+    <div class="banner">En Caso de Accidentes</div>
+    <h4>El instructivo <a href="{% static 'IPE_28_ACCIDENTES_DE_TRABAJO.pdf' %}:">IPE 28 - Accidentes de Trabajo</a> establece los procedimientos a seguir en caso de accidentes laborales en la ANDE</h4>
+    <ul>
+        <li>
+            <p><strong>Finalidad</strong>: Define el procedimiento para asistir a empleados accidentados y detalla el r&eacute;gimen de compensaciones e indemnizaciones conforme a acuerdos colectivos y disposiciones legales.</p>
+        </li>
+        <li>
+            <p><strong>Concepto de Accidente de Trabajo</strong>: Se considera accidente laboral cualquier evento imprevisto que cause lesiones f&iacute;sicas o enfermedades mentales al empleado durante su trabajo.</p>
+        </li>
+        <li>
+            <p><strong>Definiciones</strong>:</p>
+            <ul>
+                <li><strong>Lesi&oacute;n Corporal</strong>: Da&ntilde;os f&iacute;sicos que impiden temporalmente o permanentemente el trabajo.</li>
+                <li><strong>Inactividad Temporal</strong>: Incapacidad para trabajar por un per&iacute;odo limitado.</li>
+                <li><strong>Incapacidad Parcial Permanente</strong>: P&eacute;rdida parcial de capacidades que afecta el trabajo.</li>
+                <li><strong>Incapacidad Total Permanente</strong>: Imposibilidad total para trabajar.</li>
+                <li><strong>Muerte</strong>: Fallecimiento causado por un accidente laboral.</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Alcance y Condiciones</strong>: Se consideran accidentes laborales los ocurridos en el desempe&ntilde;o de tareas, en el trayecto al trabajo, por agresiones relacionadas con el trabajo, y en la prestaci&oacute;n de auxilios en situaciones de emergencia. No se consideran accidentes laborales los ocurridos fuera del horario o lugar de trabajo, durante actividades ajenas, por disfunciones biol&oacute;gicas, o a terceros y contratistas.</p>
+        </li>
+        <li>
+            <p><strong>Procedimiento en caso de Accidente</strong>:</p>
+            <ul>
+                <li><strong>Comunicaci&oacute;n</strong>: El accidente debe ser reportado inmediatamente a la jefatura y al Departamento de Acompa&ntilde;amiento del Personal (DRH/DAP).</li>
+                <li><strong>Accidentes Graves o Fatales</strong>: Comunicaci&oacute;n r&aacute;pida entre las unidades relevantes para intervenir.</li>
+                <li><strong>Atenci&oacute;n M&eacute;dica</strong>: Coordinaci&oacute;n de atenci&oacute;n m&eacute;dica adecuada, preferiblemente en el Instituto de Previsi&oacute;n Social (IPS).</li>
+                <li><strong>Documentaci&oacute;n y Reporte</strong>: Presentaci&oacute;n de certificados m&eacute;dicos y reportes de accidentes a la jefatura y al DRH/DAP.</li>
+                <li><strong>Multas por Tardanza</strong>: La jefatura es responsable de las multas por tardanza en la presentaci&oacute;n de reportes al IPS.</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Compensaciones e Indemnizaciones</strong>:</p>
+            <ul>
+                <li><strong>Inactividad Temporal</strong>: Pago del salario durante hasta 3 meses y subsidio adicional del IPS.</li>
+                <li><strong>Incapacidad Total Permanente</strong>: Indemnizaci&oacute;n de 75 salarios m&iacute;nimos de ANDE.</li>
+                <li><strong>Incapacidad Parcial Permanente</strong>: Indemnizaci&oacute;n proporcional seg&uacute;n la Tabla de Grados de Invalidez.</li>
+                <li><strong>Muerte</strong>: Indemnizaci&oacute;n de 75 salarios m&iacute;nimos a los sucesores legales.</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Acompa&ntilde;amiento y Tratamiento</strong>: La empresa gestiona el tratamiento para la recuperaci&oacute;n total del empleado accidentado, incluyendo atenci&oacute;n m&eacute;dica especializada y rehabilitaci&oacute;n.</p>
+        </li>
+    </ul>
+
+
+    <button class='btn primary' style='width:240px; color: white;' href="{% static 'COMUNICACION_ACCIDENTE_TRABAJO.pdf' %}">
+        Formulario de comunicación
+    </button>
+</div>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<style>
+
+    h5 {
+        color: black;
+        margin: 5px 0;
+    }
+    h4 {
+        color: black;
+        margin: 5px 0;
+    }
+    p {
+        margin: 3px 0;
+    }
+</style>
+<div class="content" style='flex-wrap: nowrap;'>
+    <div class="banner">Permisos</div>
+
+    <h4>El instructivo <a href='{% static "IPE_14_PERMISOS_AL_PERSONAL.PDF" %}'>IPE 14 - Permisos al Personal de ANDE</a> detalla los criterios y procedimientos para otorgar permisos a su personal permanente, ya sean con o sin goce de salario, en conformidad con leyes y contratos colectivos vigentes. A continuaci&oacute;n, se presenta un resumen de los puntos principales:</h4>
+
+        <h5>Permisos con Goce de Salario:</h5>
+        <h5>Estos permisos se pueden gestionar en DRH/DAP</h5>
+        <ul>
+            <li><strong>Enfermedad de Familiares</strong>: Hasta 20 días al año, con posibilidad de extensión en casos graves. Para funcionarios permanentes</li>
+            <li><strong>Ex&aacute;menes M&eacute;dicos de Papanicolau y Mamograf&iacute;a</strong>: 1 d&iacute;a al a&ntilde;o por tipo de exámen.</li>
+            <li><strong>Paternidad y Adopci&oacute;n</strong>: 14 días calendario a partir del nacimiento o resoluci&oacute;n judicial.</li>
+            <li><strong><a href='/maternidad'>Maternidad</a></strong>: 126 días calendario.</li>
+            <li><strong>Adopción por Funcionaria</strong>: 18 semanas cuando el adoptado fuere menor de 6 meses y 12 semanas si es mayor de 6 meses.</li>
+            <li><strong>Amamantamiento</strong>: 2 horas diarias hasta 9 meses del niño/a, prorrogables hasta los 24 meses, con prescripci&oacute;n m&eacute;dica.</li>
+        </ul>
+        <h5>Estos permisos se pueden gestionar en otras unidades de la DRH</h5>
+        <ul>   
+            <li><strong>Matrimonio</strong>: Este permiso se debe gestionar en DRH/DGP, 2 semanas calendario para funcionarios permanentes.</li>
+            <li><strong>Fallecimiento de Familiares</strong>: Este permiso se debe gestionar en DRH/DGP.</li>
+            <li><strong>Exámenes Finales</strong>: 1 d&iacute;a por examen, hasta un m&aacute;ximo de 15 asignaturas por a&ntilde;o. Gestionar con el DRH/DFC.</li>
+            <li><strong>Docencia Universitaria</strong>: Hasta 2 horas semanales o 8 horas mensuales. Gestionar con el DRH/DFC.</li>
+            <li><strong>Becas y Capacitación</strong>: Permiso especial conforme al inter&eacute;s de ANDE, hasta 2 a&ntilde;os con goce de salario, o hasta 3 a&ntilde;os sin goce de salario. Gestionar en DFC</li>
+            <li><strong>Cumplimiento de Disposiciones Legales</strong>: Hasta 15 d&iacute;as al a&ntilde;o. Gestionar con DRH/DGP.</li>
+            <li><strong>Licencia Sindical</strong>: Para actividades sindicales conforme a los contratos colectivos vigentes. Gestionar con DRH/DGP.</li>
+            
+        </ul>
+
+
+        <h5>Procedimiento:</h5>
+        <ul>
+            <li>Los funcionarios deben llenar y presentar un formulario de Solicitud de Permiso (SP) junto con documentos respaldatorios.</li>
+            <li>La jefatura correspondiente verifica, registra y remite la solicitud a los departamentos pertinentes para su autorizaci&oacute;n.</li>
+            <li>En casos de permisos especiales, se requiere una antelaci&oacute;n m&iacute;nima para tr&aacute;mites previos y autorizaciones.</li>
+        </ul>
+
+        <h5>Nivel de Competencia:</h5>
+        <ul>
+            <li>Verificaci&oacute;n y canalizaci&oacute;n de solicitudes por parte de la jefatura de cada unidad administrativa.</li>
+            <li>Registro y autorizaci&oacute;n en el Sistema Corporativo de Control de Asistencia y Puntualidad (HRCAP) por los departamentos correspondientes.</li>
+        </ul>
+
+        <a href="{% static 'SOLICITUD_DE_PERMISO.pdf' %}" class='btn primary' style='width:240px; color: white; text-decoration: none; display: inline-block;'>
+                Formulario de solicitud
+        </a>
+        
+</div>
+{% endblock %}

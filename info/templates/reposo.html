@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    h1, h2, h4 {
+        color: #2c3e50;
+    }
+    .section {
+        margin-bottom: 20px;
+    }
+    .section h2 {
+        border-bottom: 2px solid #2c3e50;
+        padding-bottom: 5px;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    ul li {
+        margin-bottom: 10px;
+    }
+
+</style>
+<div class="content" style='flex-wrap: nowrap;'>
+    <div class="banner">Reposo</div>
+    <div class="container">
+    <h4>Si ya tenes tu reposo particular superior a 48 horas, seguí este  <a href="https://servicios.ips.gov.py/reg/servlet/WSNavigatorPlus?_APPNAME=bpm&_PAGE=cyrw_registro_reposo.index_pag&_NEWSESSION=TRUE">enlace.</a>
+    </h4>
+
+    <h4>Si tu reposo particular es de un día, seguí este <a href="{% url 'reposo_particular' %}">enlace.</a></h4>
+
+    <h4>Si queres descargar tu certificado de reposo del IPS, seguí este <a href="https://servicios.ips.gov.py/bcp/consultaCertReposo.php">enlace</a>.</h4>
+    </div>
+
+    <h2>Escala de Pago:</h2>
+        <li>Por enfermedad: 50% del salario básico mensual a partir del segundo día de reposo hasta el sexto mes.
+        <li>Por accidente de trabajo: 100% del salario básico mensual desde el primer día hasta el tercer mes, y 25% del salario básico mensual desde el cuarto hasta el duodécimo mes.
+    
+    <h2>Disposiciones Generales:</h2>
+
+        <li>El primer día de reposo por enfermedad es subsidiado.
+        <li>Los reposos no procesados por el IPS serán devueltos.
+        <li>Los reposos mayores a un día requieren certificación médica adecuada y deben ser registrados electrónicamente.
+        <li>Los reposos deben estar debidamente documentados y validados.
+
+
+<h2>Responsabilidades:</h2>
+
+<li>DRH/DAP: Verificación de la documentación y trámites necesarios para el pago del complemento.
+    <li>DRH/DGP: Verificación de la documentación para la liquidación de sueldos y bloqueo de conceptos incompatibles.
+        <li>Jefatura de la Unidad Administrativa: Control efectivo del uso del reposo médico por parte de los funcionarios.
+
+<h2>
+Procedimiento:
+</h2>
+
+<li>
+El funcionario presenta la constancia de reposo médico a la jefatura de su unidad.
+<li>
+La jefatura verifica, registra el ausentismo en la plataforma de autoservicio y remite con memo al DRH/DAP en fisico y por sistema.
+<br>
+
+</br>
+<a href="{% static 'PTH_01.pdf' %}" class='btn primary' style='width:240px; color: white; text-decoration: none; display: inline-block;'>
+    Descargar PTH 01
+</a>
+</div>
+{% endblock %}

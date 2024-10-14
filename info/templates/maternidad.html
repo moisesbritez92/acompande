@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    h1, h2, h4 {
+        color: #2c3e50;
+    }
+    .section {
+        margin-bottom: 20px;
+    }
+    .section h2 {
+        border-bottom: 2px solid #2c3e50;
+        padding-bottom: 5px;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    ul li {
+        margin-bottom: 10px;
+    }
+
+</style>
+<div class="content" style='flex-wrap: nowrap;'>
+    <div class="banner">Permiso por maternidad</div>
+
+<h4>Las siguientes documentaciones deben ser remitidas al Dpto. de Acompañamiento del Personal.</h4>
+
+<div class='section'>
+    <p>REPOSO: Remitir Memo con Constancia Patronal del IPS impresa desde la <a href="https://servicios.ips.gov.py/bcp/consultaCertReposo.php">web</a> o la <a href="https://servicios.ips.gov.py/reg/servlet/WSNavigatorPlus?_APPNAME=bpm&_PAGE=cyrw_registro_reposo.index_pag&_NEWSESSION=TRUE">transcripción</a>.</p>
+
+    <p>ADELANTO DE SALARIO: Remitir formulario <a href='{% static "Formulario_Reposo_por_Maternidad.pdf" %}'>Reposo por Maternidad</a> con Constancia Patronal del IPS impresa desde la web (Aplica a funcionarios permanentes).</p>
+
+    <p>BONIFICACION FAMILIAR: Remitir  formulario de <a href='{% static "SOLICITUD_DE_BF.pdf" %}'>Solicitud de Subsidio</a>, anexando certificado de nacimiento original.</p>
+</div>
+
+<h5>
+OBSERVACION:  cada uno debe tener su número de ID generado para ingresar por Opentext (en total son 3 IDs).
+</h5>
+
+<div class="banner">Permiso por Lactancia</div>
+<div class='section'>
+2 horas diarias hasta los 9 meses del niño/a, y posteriormente 1 hora al día, prorrogables cada 3 meses con prescripción médica hasta los 2 años del niño/a.
+<p><strong>Requisitos:</strong></p>
+Presentar el formulario de <a href='{% static "SOLICITUD_DE_PERMISO.pdf" %}'>Solicitud de Lactancia</a> con la prescripción médica correspondiente.
+</div>
+
+
+<div class="banner">Permiso por Paternidad</div>
+
+<div class='section'>
+    <strong>14 días calendario desde el nacimiento del niño/a.</strong>
+
+<p><strong>Requisitos:</strong></p>
+Presentar el formulario de <a href='{% static "SOLICITUD_DE_PERMISO.pdf" %}'>Solicitud de Permiso</a> con la copia del certificado de nacimiento. 
+<p></p>
+Para la bonificación familiar presentar la <a href='{% static "SOLICITUD_DE_BF.pdf" %}'>Solicitud de Subsidio</a> con el certificado de nacimiento original.
+</div>
+
+
+</div>
+{% endblock %}

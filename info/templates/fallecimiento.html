@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        h2 {
+            color: black;
+        }
+        h3 {
+            color: black;
+        }
+        p {
+            margin: 3px 0;
+        }
+    </style>
+</head>
+<div class="content" style='flex-wrap: nowrap;'>
+    <div class="banner">Subsidio por fallecimiento de un familiar</div>
+
+
+<p>Aplica por fallecimiento del cónyuge, padres, hijos menores de 18 años o hijos con capacidades diferentes sin límite de edad. Corresponde el pago de un salario minimo oficial por cada caso.</p>
+
+<h2>Documentos necesarios en caso de fallecimiento de un familiar:</h2>
+
+<p>Certificado de defunción original.</p>
+
+<p>Documento que compruebe el vínculo (Certificado de Matrimonio, Certificado de Nacimiento).</p>
+
+<p>Presentar estos documentos con la <a href="{% static 'Solicitud_de_subsidio.pdf' %}">Solicitud de Subsidio por fallecimiento familiar</a> al DRH/DAP.</p>
+   
+<p>
+</p>
+<div class="banner">Fallecimiento del trabajador</div>
+
+
+
+<p> Tienen derecho a este subsidio el familiar del trabajador fallecido responsable de los gastos funerarios.</p>
+
+<p>El subsidio consiste en una ayuda económica de 5 Salarios Mínimos Mensuales de ANDE (SMMA) para cubrir los gastos si el funcionario es permanente y el 50% si es contratado.
+</p>
+
+<h2>Procedimiento</h2>
+
+<p> El familiar del trabajador presenta una <a href="{% static 'nota_pago_de_gastos_sepelio.docx' %}">Nota de Solicitud de Subsidio por Gastos Funerarios</a>, adjunta el Certificado de Defunción (original), el documento que compruebe el vínculo (certificado de nacimiento, matrimonio, etc), la fotocopia de Cédula de Identidad y el comprobante de pago original de los gastos funerarios al jefe de la unidad del trabajador fallecido.</p>
+
+<p>El jefe de la unidad recibe y remite la solicitud y la documentación al DRH/DAP.</p>
+
+<p>El DRH/DAP verifica la documentación, elabora y firma un Interno (I) solicitando el desembolso.
+</p>
+
+<h2>Indemnización por fallecimiento de funcionario</h2>
+
+<p>Se establece el procedimiento para el otorgamiento de indemnizaciones/compensaciones por fallecimiento de funcionarios permanentes.
+</p>
+
+<h3>Indemnización por fallecimiento de funcionario:</h3>
+<p><strong>Indemnización por fallecimiento a causa de riesgos en el trabajo:</strong>
+     Pago único equivalente a 75 Salarios Mínimos Mensuales de ANDE (SMMA vigente al momento del fallecimiento).</p>
+<p>Se considera fallecimiento por accidente de trabajo cuando está reconocido oficialmente.</p>
+
+
+<p><strong>Compensación por fallecimiento por causas ajenas a riesgos en el trabajo:</strong> Pago único equivalente al 60% de 75 SMMA vigente al momento del fallecimiento.
+</p>
+
+<h3>documentos requeridos</h3>
+
+<p> <a href="{% static 'nota_a_ande_solicitud_indemnizacion.docx' %}">Nota Solicitud de Indemnización/Compensación.</a></p>
+
+<p>Certificado de Defunción Original.</p>
+
+<p>Sentencia Definitiva de Declaratoria de herederos.</p>
+
+<p>Fotocopias de Cédulas de Identidad de los herederos.</p>
+
+<p>Los familiares deben generar el expediente de mesa de entrada en la <a href="https://www.ande.gov.py/servicios/">pagina web de la ANDE</a> o la app MiAnde y presentar los documentos originales en el Departamento de Acompañamiento del Personal.</p>
+
+
+</div>
+{% endblock %}

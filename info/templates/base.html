@@ -1,0 +1,187 @@
+<!-- myapp/templates/info.html -->
+ {% load static %}
+ <head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .btn {
+            border: none; 
+            color: white; 
+            padding: 14px 28px; 
+            cursor: pointer; 
+            border-radius: 5px; 
+        }
+          
+        .primary {background-color: #007bff;} 
+        .primary:hover {background: #0b7dda;}
+          
+        .sidebar {
+            width: 150px;
+            height: 100vh;
+            background-color: #f4f4f4;
+            padding: 10px;
+            box-shadow: 5px 0 5px rgba(0,0,0,0.1);
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+            transform: translateX(-100%);
+        }
+        .sidebar.show {
+            transform: translateX(0);
+        }
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            color: #333;
+            padding: 5px;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+        .sidebar a .fa {
+            margin-right: 5px;
+        }
+        .content {
+            margin-top: 20px;
+            padding: 5px;
+            width: 90%;
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            transition: margin-left 0.3s ease;
+        }
+        .logo {
+            width: 100%;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .logo img {
+            max-width: 100%;
+            height: auto;
+        }
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: calc(90% - 30px);
+            height: calc(33.333% - 30px);
+            text-decoration: none;
+            color: inherit;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .card-icon {
+            padding: 5px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .card-icon .fa {
+            font-size: 10px;
+            color: #333;
+        }
+        .card-content {
+            padding: 5px;
+        }
+        .card-title {
+            font-size: 15px;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        .card-description {
+            font-size: 14px;
+            margin: 0;
+            color: #666;
+        }
+        /* Botón para mostrar/ocultar el sidebar */
+        .toggle-btn {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 5px;
+            font-size: 15px;
+            cursor: pointer;
+            z-index: 1001;
+            border-radius: 5px;
+        }
+
+        /* Media queries para pantallas pequeñas */
+        @media (min-width: 769px) {
+            .sidebar {
+                transform: translateX(0); /* Sidebar visible en pantallas más grandes */
+                width: 120px;
+            }
+            .content {
+                margin-left: 150px; /* Ajustar el margen cuando el sidebar está visible */
+            }
+            .toggle-btn {
+                display: none; /* Ocultar el botón de menú en pantallas grandes */
+            }
+        }
+
+        /* Ajustes para pantallas móviles (teléfonos) */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%; /* Hacer que el sidebar ocupe todo el ancho de la pantalla en dispositivos móviles */
+                transform: translateX(-100%); /* Oculto por defecto */
+            }
+            .sidebar.show {
+                transform: translateX(0); /* Mostrar el sidebar al hacer clic en el botón */
+            }
+            .content {
+                margin-left: 25px; /* Eliminar margen en móviles cuando el sidebar está oculto */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Botón para mostrar/ocultar el sidebar -->
+    <button class="toggle-btn" id="toggleBtn" onclick="toggleSidebar()">
+        <i class="fa fa-bars"></i> Menú
+    </button>
+    
+    <div class="sidebar" id="sidebar">
+        <div class="logo">
+            <img src="{% static 'ANDE_logo.png' %}" alt="Logo" width="80px">
+            <p>Acompañamiento del personal de la ANDE</p>
+        </div>
+        <a href="{% url 'info' %}"><i class="fa fa-info-circle"></i> Info</a>
+        <a href="{% url 'uniformes' %}"><i class="fa-solid fa-user"></i> Uniformes </a>
+    </div>
+    
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('show');
+        }
+    </script>
+
+</body>
+
+
+
+
+
+

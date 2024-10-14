@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<div class="content" style='flex-wrap: nowrap;'>
+    <div class="banner">Reposo Particular</div>
+<h3>Los reposos médicos por un (1) día, expedidos por Profesionales Médicos Particulares a
+nombre del funcionario afectado, deberán contener membrete o sello institucional del
+nosocomio al cual acude, firma, aclaración de firma y número del registro profesional
+correspondiente del médico afectado, y expresar claramente el diagnóstico, sin enmiendas o
+tachaduras; los mismos deberán ser originales y ser remitidos por medio de un Memorándum
+al Departamento de Acompañamiento del Personal (DRH/DAP) para los controles y
+validaciones pertinentes, hasta un máximo de seis (6) reposos por año, los cuales no podrán
+ser días consecutivos cuando correspondan al mismo diagnóstico.</h3>
+
+<a href="{% static 'PTH_01.pdf' %}" class='btn primary' style='width:240px; color: white; text-decoration: none; display: inline-block;'>
+    Descargar PTH 01
+</a>
+
+</div>
+{% endblock %}

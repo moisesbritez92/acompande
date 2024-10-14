@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="content" style="display: flex; flex-direction: column;">
+  
+    <h2>Uniformes</h2>
+    <br>
+    <p>En esta sección podrás encontrar toda la información sobre los uniformes de la ANDE.</p>
+    <p>Los uniformes son una parte importante de la imagen de la ANDE, por lo que es importante que el personal los use correctamente.</p>
+    <p>En esta sección podrás:</p>
+
+    <button class="btn" style="width: 80px; padding: 10px 20px; color: white; background-color: blue;">Estimar Talle</button>
+
+
+    <p>Si tienes alguna duda sobre los uniformes, puedes comunicarte con el Departamento de Acompañamiento del Personal de la ANDE.</p>
+    <p>Recuerda que los uniformes son una parte importante de la imagen de la ANDE, por lo que es importante que los uses correctamente.</p>
+    <p>¡Gracias por tu colaboración!</p>
+</div>
+
+<script>
+    document.querySelector('.btn').addEventListener('click', function() {
+        window.location.href = '/talles';
+
+    });
+</script>
+{% endblock%}

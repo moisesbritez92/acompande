@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="content" style='flex-wrap: nowrap;'>
+    <div class="banner">Requisitos para inscripción de familiares a IPS</div>
+    <h4>Para inscribir a un familiar a IPS, se requiere presentar los siguientes documentos:</h4>
+    
+            <h5>C&oacute;nyuges:</h5>
+
+            <ul>
+                <li>Copia autenticada de c&eacute;dulas de identidad del asegurado y c&oacute;nyuge.</li>
+                <li>Certificado de matrimonio original o copia autenticada.</li>
+            </ul>
+
+            <h5>Hijos menores de edad:</h5>
+            <ul>
+                <li>Copia autenticada de c&eacute;dulas de identidad del asegurado y del menor.</li>
+                <li>Certificado de nacimiento original o copia autenticada.</li>
+            </ul>
+            <h5>Hijos mayores con capacidades diferentes:</h5>
+            <ul>
+                <li>Copia autenticada de c&eacute;dulas de identidad del asegurado y del hijo.</li>
+                <li>Certificado de nacimiento original.</li>
+                <li>Resoluci&oacute;n del IPS y certificado de incapacidad.</li>
+            </ul>
+            <h5>Concubinos:</h5>
+            <ul>
+                <li>Copia autenticada de c&eacute;dulas de identidad del asegurado y concubino.</li>
+                <li>Informaci&oacute;n sumaria de testigos y declaraci&oacute;n jurada de dependencia econ&oacute;mica.</li>
+            </ul>
+
+            <h5>Ascendientes (padres/madres):</h5>
+            <ul>
+                <li>Copia autenticada de c&eacute;dulas de identidad del asegurado y del ascendiente.</li>
+                <li>Certificado de vida y residencia y certificado de nacimiento del asegurado.</li>
+            </ul>
+            <a href="{% static 'Requisitos_para_IPS.pdf' %}" class='btn primary' style='width:240px; color: white; text-decoration: none; display: inline-block;'>
+                Requisitos
+            </a>
+</div>
+{% endblock %}

@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="content" style="align-content: flex-end;">
+    <a href="{% url 'accidentes' %}" class="card">
+        <div class="card-icon">
+            <i class="fa fa-info-circle"></i>
+        </div>
+        <div class="card-content">
+            <h2 class="card-title">Ocurrio un accidente?</h2>
+            <p class="card-description">Aquí podrás encontrar toda la información en caso de accidentes.</p>
+        </div>
+    </a>
+    <a href="{% url 'permisos' %}" class="card">
+        <div class="card-icon">
+            <i class="fa fa-info-circle"></i>
+        </div>
+        <div class="card-content">
+            <h2 class="card-title">Quiero solicitar permiso 😬</h2>
+            <p class="card-description">Aquí podrás encontrar toda la información de cuales son los permisos con goze de sueldo con los que cuenta el personal de la ANDE.</p>
+        </div>
+    </a>
+    </a>
+    <a href="{% url 'requisitos_ips' %}" class="card">
+        <div class="card-icon">
+            <i class="fa fa-info-circle"></i>
+        </div>
+        <div class="card-content">
+            <h2 class="card-title">Agregar beneficiarios a IPS</h2>
+            <p class="card-description">Aquí podrás encontrar toda la información de cuales son los requisitos para inscribir un familiar a IPS, y tenga todos los beneficios que ofrece IPS.</p>
+        </div>
+    </a>
+    <a href="{% url 'jubilacion' %}" class="card">
+        <div class="card-icon">
+            <i class="fa fa-info-circle"></i>
+        </div>
+        <div class="card-content">
+            <h2 class="card-title">Me estoy jubilando 🥹 </h2>
+            <p class="card-description">Aquí podrás encontrar toda la información sobre la jubilación, nosotros te acompañamos en esta nueva etapa.</p>
+        </div>
+    </a>
+    <a href="{% url 'reposo' %}" class="card">
+        <div class="card-icon">
+            <i class="fa fa-info-circle"></i>
+        </div>
+        <div class="card-content">
+            <h2 class="card-title">Reposo 🤧😷🤕 </h2>
+            <p class="card-description">Aquí podrás encontrar toda la información sobre reposo por enfermedad.</p>
+        </div>
+    </a>
+    <a href="{% url 'maternidad' %}" class="card">
+        <div class="card-icon">
+            <i class="fa fa-info-circle"></i>
+        </div>
+        <div class="card-content">
+            <h2 class="card-title">Maternidad, lactancia y paternidad</h2>
+            <p class="card-description">Aquí podrás encontrar toda la información sobre las condiciones de maternidad, lactancia, paternidad y <strong>bonificación familiares</strong> de la ANDE.</p>
+        </div>
+    </a>
+    <a href="{% url 'escolar' %}" class="card">
+        <div class="card-icon">
+            <i class="fa fa-info-circle"></i>
+        </div>
+        <div class="card-content">
+            <h2 class="card-title">Ya empezó la escuela 📚🎒</h2>
+            <p class="card-description">Aquí podrás encontrar toda la información sobre la bonificación para el comienzo de la escuela de los chicos.</p>
+        </div>
+    </a>
+    <a href="{% url 'fallecimiento' %}" class="card">
+        <div class="card-icon">
+            <i class="fa fa-info-circle"></i>
+        </div>
+        <div class="card-content">
+            <h2 class="card-title">Lastimosamente falleció un familiar o un funcionario</h2>
+            <p class="card-description">En estos momentos dificiles nosotros estamos contigo, aquí te proporcionamos la información necesaria.</p>
+        </div>
+    </a>
+    <a href="{% url 'bonificaciones' %}" class="card">
+        <div class="card-icon">
+            <i class="fa fa-info-circle"></i>
+        </div>
+        <div class="card-content">
+            <h2 class="card-title">Bonificación familiar</h2>
+            <p class="card-description">Aquí encontraras la información necesaria sobre las bonificaciones familiares.</p>
+        </div>
+    </a>
+    <!-- Puedes agregar más tarjetas aquí -->
+</div>
+</body>
+</html>
+{% endblock %}

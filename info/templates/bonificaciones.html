@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        h2 {
+            color: black;
+        }
+        h3 {
+            color: black;
+        }
+        p {
+            margin: 3px 0;
+        }
+    </style>
+</head>
+<div class="content" style='flex-wrap: nowrap;'>
+    <div class="banner">Bonificacón familiar</div>
+
+<p>Se entiende por Bonificación Familiar, la asignación equivalente al 5% del Salario Mínimo
+Mensual de ANDE (SMMA), otorgado al/la funcionario/a por cada hijo menor de 18 (diez y
+ocho) años de edad.</p>
+
+<p>Se entiende por Bonificación Familiar Especial la asignación equivalente al 10 (diez) %
+del Salario Mínimo Mensual de ANDE (SMMA), otorgado al/la funcionario/a por cada hijo,
+sin límite de edad, que presente capacidades diferentes, comprobada mediante documento
+original expedido por La SENADIS.</p>
+
+
+<p>Cuando la bonificación familiar fuese solicitada por cónyuges funcionarios de la Institución,
+será concedida solamente a uno de ellos, ó en su defecto, a aquel que tenga la guarda o
+custodia legal.</P>
+
+<h3>Documentos necesarios</h3>
+<p>Remitir la Solicitud de Bonificación Familiar (SBF) con la documentación requerida al Departamento de Acompañamiento del Personal (DRH/DAP).</p>
+<ul>
+<li><a href="{% static 'Solicitud_de_subsidio.pdf' %}">Solicitud de subsidio</a></li>
+<li>Certificado de nacimiento original</li>
+<li>Certificado de discapacidad de la SENADIS (en caso de hijos con capacidades diferentes)</li>
+</ul>
+</div>
+{% endblock %}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Estimador de Talle</title>
+</head>
+<body>
+  <h1>Estimador de Talle de Camisa</h1>
+  <video id="video" width="640" height="480" autoplay></video>
+  <button id="snap">Tomar Foto</button>
+  <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+  <br>
+  <input type="number" id="altura" placeholder="Introduce tu altura en cm">
+  <p id="resultado"></p>
+  <img id="imagen_resultado" src="" alt="Imagen con puntos clave" style="max-width: 100%; height: auto;">
+
+  <script>
+    var video = document.getElementById('video');
+
+    // Solicitar acceso a la cámara
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(function(stream) {
+        video.srcObject = stream;
+      })
+      .catch(function(err) {
+        console.log("Error al acceder a la cámara: " + err);
+      });
+
+    // Capturar la imagen cuando se presione el botón
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    document.getElementById('snap').addEventListener('click', function() {
+      context.drawImage(video, 0, 0, 640, 480);
+      var dataURL = canvas.toDataURL('image/png');
+      // Enviar dataURL al servidor
+      enviarImagen(dataURL);
+    });
+
+    function enviarImagen(dataURL) {
+      var altura = document.getElementById('altura').value;
+      fetch('/procesar_imagen/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': '{{ csrf_token }}'
+        },
+        body: JSON.stringify({ image: dataURL, altura: altura })
+      })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('resultado').innerText = 'Talle estimado: ' + data.talle;
+        if (data.imagen) {
+          document.getElementById('imagen_resultado').src = data.imagen;
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    }
+  </script>
+</body>
+</html>
